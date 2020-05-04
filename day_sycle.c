@@ -168,8 +168,9 @@ int day_sycle (){
 int ransuu (double wariai){
     double num;
     num = (double)rand()/RAND_MAX;
-    printf("%lf",wariai );
-    if (num < wariai /* ga_kai[day_counter][ga_sedai] */){
+    double wariai2;
+    wariai2 = wariai * ga_kai[day_counter][ga_sedai];
+    if (num < wariai2){
         return 1;
     }else
     {

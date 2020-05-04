@@ -15,7 +15,7 @@ void ga(){
             ga_kai[i][n] = (double)rand() / RAND_MAX;
         }
     }
-    kai_hyoka(0);
+    printf("%lf",kai_hyoka(0));
 }
 double kai_hyoka (int kai_number){
     double point;
@@ -24,9 +24,8 @@ double kai_hyoka (int kai_number){
     for(i=0;i<180;i++){
         point += ga_kai[i][kai_number];
     }
-    point = point / day_sycle();
+    point = point / (30000 - day_sycle());
 
-    printf("a%d\n",day_sycle());
     return point;
 }
 #endif
